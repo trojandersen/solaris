@@ -1,1 +1,1 @@
-const apiKey = "solaris-NKsTcw3OPrMQPoSz";
+const apiKey = "solaris-BHRyCR5Lgznl28Tr";
