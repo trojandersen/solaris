@@ -1,2 +1,2 @@
 # solaris
-Frontend Dev task
+Troj Andersen - Solaris
