@@ -3,29 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/apikeys.js"></script>
-    <script type="module" src="js/script.js" defer></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-
     <title>Solaris</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/script.js" defer></script>
   </head>
   <body>
     <main class="wrapper">
-      <section class="title-container">
-        <h1 class="star-system">SOLSYSTEMET</h1>
-        <h2 class="star">SOLARIS</h2>
+      <section class="wrapper__solarsystem">
+        <div id="sun" class="wrapper__sun"></div>
+        <div id="mercury" class="wrapper__mercury"></div>
+        <div id="venus" class="wrapper__venus"></div>
+        <div id="earth" class="wrapper__earth"></div>
+        <div id="mars" class="wrapper__mars"></div>
+        <div id="jupiter" class="wrapper__jupiter"></div>
+        <div id="saturnus" class="wrapper__saturnus"></div>
+        <div id="uranus" class="wrapper__uranus"></div>
+        <div id="neptunus" class="wrapper__neptunus"></div>
       </section>
-      <section class="body-container">
-        <!-- TODO: append celestial bodies with API -->
-      </section>
-      <section class="zocom-logo">ZoCom</section>
     </main>
   </body>
 </html>
