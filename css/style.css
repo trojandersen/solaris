@@ -23,6 +23,8 @@ body {
 
 .wrapper {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .wrapper__solarsystem {
@@ -33,7 +35,7 @@ body {
 
 .wrapper__sun {
   height: 80rem;
-  width: 24rem;
+  width: 25rem;
   position: relative;
   left: -16rem;
   background-color: #FFD029;
@@ -96,4 +98,8 @@ body {
   width: 5rem;
   background-color: #7A91A7;
   border-radius: 50%;
+}
+
+.wrapper__modal {
+  display: none;
 }

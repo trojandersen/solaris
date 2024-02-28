@@ -9,6 +9,15 @@
   </head>
   <body>
     <main class="wrapper">
+      <form id="search-form" class="wrapper__search-form">
+        <input
+          id="search-input"
+          class="wrapper__search-input"
+          type="text"
+          placeholder="Search for a planet.."
+        />
+        <button id="submit" class="wrapper__search-button">Search</button>
+      </form>
       <section class="wrapper__solarsystem">
         <div id="sun" class="wrapper__sun"></div>
         <div id="mercury" class="wrapper__mercury"></div>
@@ -19,6 +28,8 @@
         <div id="saturnus" class="wrapper__saturnus"></div>
         <div id="uranus" class="wrapper__uranus"></div>
         <div id="neptunus" class="wrapper__neptunus"></div>
+      </section>
+      <section id="modal" class="wrapper__modal">
       </section>
     </main>
   </body>
