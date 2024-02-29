@@ -8,18 +8,24 @@
     <script type="module" src="js/script.js" defer></script>
   </head>
   <body>
-    <main class="wrapper">
-      <form id="search-form" class="wrapper__search-form">
+    <header class="header">
+      <form id="search-form" class="header__search-form">
         <input
           id="search-input"
-          class="wrapper__search-input"
+          class="header__search-input"
           type="text"
           placeholder="Search for a planet.."
         />
-        <button id="submit" class="wrapper__search-button">Search</button>
+        <button id="submit" class="header__search-button">Search</button>
       </form>
+      <section class="header__title-box">
+        <h1 class="header__title">SOLSYSTEMET</h1>
+        <h2 class="header__subtitle">SOLARIS</h2>
+      </section>
+    </header>
+    <main class="wrapper">
+      <div id="sun" class="wrapper__sun"></div>
       <section class="wrapper__solarsystem">
-        <div id="sun" class="wrapper__sun"></div>
         <div id="mercury" class="wrapper__mercury"></div>
         <div id="venus" class="wrapper__venus"></div>
         <div id="earth" class="wrapper__earth"></div>
@@ -29,8 +35,11 @@
         <div id="uranus" class="wrapper__uranus"></div>
         <div id="neptunus" class="wrapper__neptunus"></div>
       </section>
-      <section id="modal" class="wrapper__modal">
-      </section>
     </main>
+    <section id="modal" class="modal">
+      <article class="modal__card">
+        
+      </article>
+    </section>
   </body>
 </html>

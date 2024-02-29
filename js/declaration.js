@@ -1,5 +1,6 @@
 // In this module we declare & interact with the DOM-elements
 
+
 const sunEle = document.querySelector("#sun");
 const mercuryEle = document.querySelector("#mercury");
 const venusEle = document.querySelector("#venus");
