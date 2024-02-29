@@ -1,5 +1,4 @@
 // this module interacts with the API to fetch our data from the backend
-
 import {apiKey} from "./apikeys.js";
 export {fetchAPI};
 
