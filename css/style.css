@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap");
 
+:root {
+  --primary-color: #f0f8ff;
+  --secondary-color: #ffd029;
+  --title-font: "Secular One";
+  --subtitle-font: "Lora";
+  --body-font: "Roboto Condensed:wght@300";
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +37,30 @@ body {
   padding: 1rem 3rem 1rem 3rem;
 }
 
+.header__search-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.header__search-input {
+  color: var(--primary-color);
+  width: 25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.1rem solid aliceblue;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+::placeholder {
+  color: var(--primary-color);
+  font-family: var(--subtitle-font);
+}
+
+.header__search-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
 .header__title-box {
   display: flex;
   flex-direction: column;
@@ -37,15 +69,15 @@ body {
 }
 
 .title {
-  color: aliceblue;
-  font-family: "Secular One";
+  color: var(--primary-color);
+  font-family: var(--title-font);
   font-size: 4rem;
   letter-spacing: 1rem;
 }
 
 .subtitle {
-  color: #ffd029;
-  font-family: "Lora";
+  color: var(--secondary-color);
+  font-family: var(--subtitle-font);
   font-size: 2rem;
   letter-spacing: 1rem;
 }
@@ -108,8 +140,7 @@ body {
 }
 
 .wrapper__saturnus {
-  display: flex;
-  align-items: center;
+  overflow: visible;
   height: 8rem;
   width: 8rem;
   background-color: #c7aa72;
@@ -118,8 +149,12 @@ body {
 
 .wrapper__saturnus-ring {
   border: 1px aliceblue solid;
-  width: 16rem;
+  position: relative;
+  left: -25%;
+  top: 50%;
+  width: 12rem;
   height: 0.05rem;
+  border-radius: 33%;
 }
 
 .wrapper__uranus {
