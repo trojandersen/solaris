@@ -83,26 +83,27 @@ body {
 }
 
 .wrapper {
-  display: flex;
-  margin-top: 2rem;
-}
-
-.wrapper__sun {
-  height: 75rem;
-  width: 40rem;
-  position: relative;
-  left: -30rem;
-  background-color: #ffd029;
-  border-radius: 50%;
-  box-shadow: 0px 0px 250px 0px #ffd02933;
+  margin: 5rem 5rem 0 0;
 }
 
 .wrapper__solarsystem {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
 }
+
+.wrapper__sun {
+  margin-right: -15rem;
+  height: 70rem;
+  width: 30rem;
+  position: relative;
+  left: -20rem;
+  background-color: #ffd029;
+  border-radius: 50%;
+  box-shadow: 0px 0px 250px 0px #ffd02933;
+}
+
+
 
 .wrapper__mercury {
   height: 1rem;
@@ -172,7 +173,7 @@ body {
 }
 
 .modal {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -180,17 +181,17 @@ body {
   width: 100%;
   height: 100%;
   color: var(--primary-color);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .card {
   display: flex;
   flex-direction: column;
   font-family: var(--title-font);
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 60%;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 65%;
   gap: 5rem;
-  padding: 5rem;
+  padding: 10rem;
   margin: 10% auto;
 }
 
