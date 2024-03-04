@@ -1,5 +1,6 @@
 // this module interacts with the API to to make a post request for an API key and then fetch the data using a get request
 // tried to use both async try and fetch.then
+
 export { fetchAPI };
 
 const baseURL = "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com";
