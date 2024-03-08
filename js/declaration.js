@@ -34,32 +34,40 @@ const searchInput = document.querySelector("#search-input");
 const searchForm = document.querySelector("#search-form");
 
 function searchPlanets() {
-  const searchTerm = searchInput.value.trim().toLowerCase();
-  let found = false; // Flag to check if any planet was found
+  const planetQuery = searchInput.value.trim().toLowerCase();
+  let result = { found : false}; // Flag to check if any planet was found
+  showSolarSystem();
+  updatePlanetVisibility(planetQuery, result);
+  if (!result.found) {
+    alert("No star or planet found! Please enter a valid name.");
+    showSolarSystem();
+  }
+}
+
+function showSolarSystem() {
+  planetID.forEach((id) => {
+    solarSystem[id].classList.remove("planet--hidden");
+    solarSystem[id].classList.remove("planet--focus-large");
+    solarSystem[id].classList.remove("planet--focus-small");
+  });
+}
+
+function updatePlanetVisibility(planetQuery, result) {
   planetID.forEach((id) => {
     solarSystem[id].classList.add("planet--hidden");
-    solarSystem[id].classList.remove("planet--focus-large", "planet--focus-small");
   });
   planetID.forEach((id) => {
-    if (id === searchTerm) {
-      // If the searchTerm finds a planet/star, we will focus it and show it and set found to true
+    if (id === planetQuery) {
+      // If the planetQuery finds a planet/star, we set found to true and will focus & show the planet/star
+      result.found = true;
       solarSystem[id].classList.remove("planet--hidden");
-      found = true;
-      if (searchTerm !== "sun") {
-        solarSystem[id].classList.add("planet--focus-large");
-        if (searchTerm !== "jupiter" && searchTerm !== "saturnus" ) {
-          solarSystem[id].classList.add("planet--focus-small")
+      if (planetQuery !== "sun") {
+        if (planetQuery !== "jupiter" && planetQuery !== "saturnus") {
+          solarSystem[id].classList.add("planet--focus-small");
+        } else {
+          solarSystem[id].classList.add("planet--focus-large");
         }
       }
     }
   });
-  // Show error message if no planets/star is found, and show all planets/star if any have the hidden tag
-  if (!found) {
-    alert("No star or planet found! Please enter a valid name.");
-    planetID.forEach((id) => {
-      if (solarSystem[id].classList.contains("planet--hidden")) {
-        solarSystem[id].classList.remove("planet--hidden");
-      }
-    });
-  }
 }
