@@ -1,5 +1,5 @@
 // Main function for the code
-import { fetchAPI } from "./apifetch.js";
+import { loadFunc } from "./apifetch.js";
 import { searchPlanets, searchForm } from "./declaration.js";
 
 
@@ -9,4 +9,4 @@ searchForm.addEventListener("submit", (e) => {
     searchPlanets();
   });
 
-fetchAPI();
+loadFunc();

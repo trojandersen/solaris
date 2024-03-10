@@ -1,5 +1,5 @@
 // In this module we declare & interact with the DOM-elements
-export { searchPlanets, searchForm };
+export { searchPlanets, searchForm, planetInfoElements, planetID };
 
 const planetID = [
   "sun",
