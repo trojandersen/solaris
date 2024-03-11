@@ -99,11 +99,13 @@ body {
 .wrapper__solarsystem .planet--focus-large {
   position: absolute;
   transform: scale(4) translateX(-35%);
+  opacity: 1;
 }
 
 .wrapper__solarsystem .planet--focus-small {
   position: absolute;
   transform: scale(10) translateX(-25%);
+  opacity: 1;
 }
 
 .planet--hidden {
@@ -268,10 +270,24 @@ body {
   flex-direction: column;
   font-family: var(--title-font);
   background-color: rgba(0, 0, 0, 0.5);
-  width: 65%;
-  gap: 5rem;
-  padding: 10rem;
-  margin: 15% auto;
+  width: 60%;
+  row-gap: 2rem;
+  padding: 1rem 3rem 15rem 3rem;
+  margin: 17.5% auto;
+}
+
+.card__close {
+  align-self: flex-end;
+  color: aliceblue;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.card__close:hover,
+.card__close:focus {
+  color: rgb(178, 185, 192);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .card__info-container {

@@ -1,5 +1,13 @@
 // In this module we declare & interact with the DOM-elements
-export { searchPlanets, searchForm, planetInfoElements, planetID };
+export {
+  searchPlanets,
+  searchForm,
+  planetInfoElements,
+  planetID,
+  close,
+  modal,
+  showSolarSystem,
+};
 
 const planetID = [
   "sun",
@@ -32,10 +40,12 @@ const planetInfoElements = {
 
 const searchInput = document.querySelector("#search-input");
 const searchForm = document.querySelector("#search-form");
+const close = document.querySelector("#close");
+const modal = document.querySelector("#modal");
 
 function searchPlanets() {
   const planetQuery = searchInput.value.trim().toLowerCase();
-  let result = { found : false}; // Flag to check if any planet was found
+  let result = { found: false }; // Flag to check if any planet was found
   showSolarSystem();
   updatePlanetVisibility(planetQuery, result);
   if (!result.found) {
@@ -68,6 +78,7 @@ function updatePlanetVisibility(planetQuery, result) {
           solarSystem[id].classList.add("planet--focus-large");
         }
       }
+      modal.style.display = "block";
     }
   });
 }
