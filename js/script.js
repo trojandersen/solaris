@@ -1,6 +1,12 @@
 // Main function for the code
 import { loadFunc } from "./apifetch.js";
-import { searchPlanets, searchForm, close, modal, showSolarSystem } from "./declaration.js";
+import {
+  searchPlanets,
+  showSolarSystem,
+  close,
+  modal,
+  searchForm,
+} from "./events.js";
 
 close.addEventListener("click", () => {
   modal.style.display = "none";

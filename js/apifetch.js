@@ -2,8 +2,6 @@
 // tried to use both async try and fetch.then
 
 export { loadFunc };
-// import { planetInfoElements, planetID } from "./declaration.js";
-
 const baseURL = "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com";
 
 const fetchAPI = () => {
@@ -45,12 +43,13 @@ function loadFunc() {
   if (!localStorage.getItem("solaris")) {
     fetchAPI().then(() => {
       const storedData = JSON.parse(localStorage.getItem("solaris"));
-      connectEleToData(storedData);
+      return storedData;
     });
   } else {
     const storedData = JSON.parse(localStorage.getItem("solaris"));
-    for (const i of storedData) {
+    storedData.forEach(i => {
       console.log(i);
-    } 
+    });
+    return storedData;
   }
 }
